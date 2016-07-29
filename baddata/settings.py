@@ -4,8 +4,11 @@ import os
 
 from django import VERSION as DJANGO_VERSION
 from django.utils.translation import ugettext_lazy as _
+from django.utils.crypto import get_random_string
 
 
+chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
+SECRET_KEY = get_random_string(50, chars)
 ######################
 # MEZZANINE SETTINGS #
 ######################
