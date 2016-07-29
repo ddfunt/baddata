@@ -99,7 +99,7 @@
 <div class="container">
 <div class="row">
 
-<div class="col-md-2 left">
+        <div class="col-md-2 left">
     {% block left_panel %}
     <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
     {% endblock %}
@@ -134,13 +134,7 @@
 
 <div class="row">
 <p class="site-info text-center">
-    {% trans "Powered by" %}
-    <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
-    <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
-    {% trans "and" %}
-    <a href="http://www.djangoproject.com">Django</a>
-    <span class="separator">|</span>
-    {% trans "Theme by" %} <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>
+
     {% ifinstalled mezzanine.mobile %}
     <span class="separator">|</span>
     <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
@@ -152,6 +146,15 @@
 
 {% block footer_js %}
 {% include "includes/footer_scripts.html" %}
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Baddata -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5756591746385400"
+     data-ad-slot="4974464519"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 {% endblock %}
 
 </body>
